@@ -11,8 +11,8 @@ Basic UI mockup:
 ![Example](examples/canvas_api_dancefloor.png)
 
 ## Requirements:
-
-The flow of app initialization and view rendering should be as follow: 
+1. Please use native Canvas API without wrappers or libs
+2. The flow of app initialization and view rendering should be as follow: 
     -> App bootstraping 
       -> Async operation to fetch the state (eg. You can simulate API call to recreate canvas with config) 
         -> UI and Canvas 
@@ -25,6 +25,7 @@ The flow of app initialization and view rendering should be as follow:
   - You can prepare transform animation
   - You can combine all of previous examples
   - What you want but first ask! :)
+  - Responsive dancefloor
  
  GOOD LUCK! :)
   
