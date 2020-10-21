@@ -55,7 +55,6 @@ export class Dancefloor {
 		this.updateSquareSize();
 		this._renderer.clear();
 		this._squares.forEach((square) => {
-			console.log('draw');
 			square.draw();
 		})
 	}
