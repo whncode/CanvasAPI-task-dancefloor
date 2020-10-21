@@ -1,12 +1,18 @@
 import { randomColor } from "../utils/Utils";
+import { Dancefloor } from "./Dancefloor";
 import { Renderer } from "./Renderer";
 
 export class Square {
+	public x : number;
+	public y : number;
+
+	private lastSize: number;
+
 	constructor(
 		private _renderer : Renderer,
-		public x : number,
-		public y : number,
-		public size: number,
+		private _danceFloor: Dancefloor,
+		public column: number,
+		public row: number,
 		public color: string = randomColor()
 	) {
 		this.draw();
@@ -14,7 +20,9 @@ export class Square {
 
 	public draw() {
 		this._renderer.context.fillStyle = this.color;
-		this._renderer.context.fillRect(this.x, this.y, this.size, this.size);
+		this.x = this.row * this._danceFloor.squareSize;
+		this.y = this.column * this._danceFloor.squareSize;
+		this._renderer.context.fillRect(this.x, this.y, this._danceFloor.squareSize, this._danceFloor.squareSize);
 	}
 
 	public changeColor() {

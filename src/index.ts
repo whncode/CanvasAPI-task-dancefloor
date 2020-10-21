@@ -34,7 +34,8 @@ const initFn = () => {
 	window.addEventListener("resize", () => {
 		renderer.width = targetForCanvas.clientWidth;
 		renderer.height = targetForCanvas.clientHeight;
-		dancefloor.renderNew();
+		renderer.resize();
+		dancefloor.redraw();
 	})
 };
 
