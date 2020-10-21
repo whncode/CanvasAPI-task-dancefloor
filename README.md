@@ -25,7 +25,7 @@ Basic UI mockup:
   - You can prepare transform animation
   - ~~You can combine all of previous examples~~
   - What you want but first ask! :)
-  - Responsive dancefloor
+  - ~~Responsive dancefloor~~
  
  GOOD LUCK! :)
   
