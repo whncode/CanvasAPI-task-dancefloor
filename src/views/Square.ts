@@ -23,9 +23,8 @@ export class Square {
 
 	public draw() {
 		this._renderer.context.fillStyle = this.color;
-		this.x = this.row * this._danceFloor.squareSize;
-		this.y = this.column * this._danceFloor.squareSize;
-		console.log(this);
+		this.x = this.column * this._danceFloor.squareSize;
+		this.y = this.row * this._danceFloor.squareSize;
 		this._renderer.context.fillRect(this.x, this.y, this._danceFloor.squareSize, this._danceFloor.squareSize);
 	}
 

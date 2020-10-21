@@ -25,7 +25,7 @@ const initFn = () => {
 	// @TODO it's shitty solution, looks like in '99, react will be very helpful...
 	configForm.addEventListener("submit", (event) => {
 		const formData = new FormData(document.querySelector('form'));
-		dancefloor.update(formData.get("columns"), formData.get("rows"));
+		dancefloor.update(formData.get("rows"), formData.get("columns"));
 		event.preventDefault();
 		return false;
 	});
