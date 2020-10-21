@@ -63,8 +63,8 @@ export class Dancefloor {
 
 	public updateSquareSize() {
 		console.log(this._danceFloorConfig);
-		const rectWidth = this._renderer.height / this._danceFloorConfig.columns;
-		const rectHeight = this._renderer.width / this._danceFloorConfig.rows;
+		const rectWidth = this._renderer.height / this._danceFloorConfig.rows;
+		const rectHeight = this._renderer.width / this._danceFloorConfig.columns;
 		this.squareSize = Math.floor(Math.min(rectWidth, rectHeight));
 
 		console.log(`renderer height: ${this._renderer.height}, rows: ${this._danceFloorConfig.rows}`);
