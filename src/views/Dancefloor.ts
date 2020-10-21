@@ -2,6 +2,10 @@ import { DanceFloorConfig } from "../types/DanceFloorConfig";
 import { Square } from "./Square";
 import { Renderer } from "./Renderer";
 
+
+/**
+ * class that manage dancefloor
+ */
 export class Dancefloor {
 	private _squares : Array<Square> = [];
 	public squareSize: number;
@@ -18,8 +22,6 @@ export class Dancefloor {
 	}
 
 	public generate() {
-		//empty set squares, we don't need to dispose anything
-		//because it's only reference here
 		this._squares = [];
 
 		//generate squares for columns and rows
@@ -60,10 +62,13 @@ export class Dancefloor {
 	}
 
 	public updateSquareSize() {
-		const rectWidth = this._renderer.width / this._danceFloorConfig.columns;
-		const rectHeight = this._renderer.height / this._danceFloorConfig.rows;
-
+		console.log(this._danceFloorConfig);
+		const rectWidth = this._renderer.height / this._danceFloorConfig.columns;
+		const rectHeight = this._renderer.width / this._danceFloorConfig.rows;
 		this.squareSize = Math.floor(Math.min(rectWidth, rectHeight));
+
+		console.log(`renderer height: ${this._renderer.height}, rows: ${this._danceFloorConfig.rows}`);
+		console.log(`rectWidth: ${rectWidth}, rectHeight: ${rectHeight}, squareSize: ${this.squareSize}`);
 
 	}
 

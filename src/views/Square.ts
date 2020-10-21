@@ -2,6 +2,9 @@ import { randomColor } from "../utils/Utils";
 import { Dancefloor } from "./Dancefloor";
 import { Renderer } from "./Renderer";
 
+/**
+ * class for drawing square
+ */
 export class Square {
 	public x : number;
 	public y : number;
@@ -22,6 +25,7 @@ export class Square {
 		this._renderer.context.fillStyle = this.color;
 		this.x = this.row * this._danceFloor.squareSize;
 		this.y = this.column * this._danceFloor.squareSize;
+		console.log(this);
 		this._renderer.context.fillRect(this.x, this.y, this._danceFloor.squareSize, this._danceFloor.squareSize);
 	}
 
