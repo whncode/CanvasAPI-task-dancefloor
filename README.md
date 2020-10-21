@@ -20,10 +20,10 @@ Basic UI mockup:
   
 ## Examples addons:
 
-  - Change square colours on document event like mouseover or onclick
-  - Prepare simple API to recreate canvas based on provided config (rows and columns quantity)
+  - ~~Change square colours on document event like mouseover or onclick~~
+  - ~~Prepare simple API to recreate canvas based on provided config (rows and columns quantity)~~
   - You can prepare transform animation
-  - You can combine all of previous examples
+  - ~~You can combine all of previous examples~~
   - What you want but first ask! :)
   - Responsive dancefloor
  

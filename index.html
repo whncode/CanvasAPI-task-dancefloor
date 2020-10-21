@@ -6,9 +6,31 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>dance floor</title>
+
+    <style>
+        #canvasTarget {
+            height: 80%;
+            width: 100%;
+            position: absolute;
+        }
+
+    </style>
 </head>
 <body>
 
 <script src="bundle.js"></script>
+<div>
+    <div>
+        <form id="configForm">
+            <input placeholder="set column quantity" name="columns"/>
+            <input placeholder="set row quantity" name="rows"/>
+            <input type="submit"/>
+        </form>
+    </div>
+
+    <div id="canvasTarget">
+
+    </div>
+</div>
 </body>
 </html>

@@ -6,7 +6,7 @@ export class Square {
 		private _renderer : Renderer,
 		public x : number,
 		public y : number,
-		public width: number,
+		public size: number,
 		public color: string = randomColor()
 	) {
 		this.draw();
@@ -14,6 +14,11 @@ export class Square {
 
 	public draw() {
 		this._renderer.context.fillStyle = this.color;
-		this._renderer.context.fillRect(this.x, this.y, this.width, this.width);
+		this._renderer.context.fillRect(this.x, this.y, this.size, this.size);
+	}
+
+	public changeColor() {
+		this.color = randomColor();
+		this.draw();
 	}
 }

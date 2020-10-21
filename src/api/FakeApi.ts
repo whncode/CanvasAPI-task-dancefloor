@@ -11,15 +11,13 @@ export class FakeApi {
 
 	}
 
-	getConfig() : Promise<DanceFloorConfig> {
+	getRandomConfig() : Promise<DanceFloorConfig> {
 	return new Promise((resolve, reject) => {
 		setTimeout(() => resolve({
-				columns: randomNumber(2,50),
-				rows: randomNumber(2, 20)
+				columns: randomNumber(2,10),
+				rows: randomNumber(2, 10)
 			})
 		, 500);
-
-
 	})
 
 
