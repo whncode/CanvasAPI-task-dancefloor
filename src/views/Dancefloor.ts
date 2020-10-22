@@ -15,7 +15,7 @@ export class Dancefloor {
 	) {
 		this.generate();
 		//init click ability
-		this.redraw();
+		this.draw();
 		this._renderer.addClickListener((x, y) => {
 			this.changeSquareColor(x, y);
 		})
@@ -42,7 +42,7 @@ export class Dancefloor {
 		this._danceFloorConfig.columns = columns;
 		this._danceFloorConfig.rows = rows;
 		this.generate();
-		this.redraw();
+		this.draw();
 	}
 
 	public changeSquareColor(x: number, y: number) {
@@ -53,7 +53,7 @@ export class Dancefloor {
 		square.changeColor();
 	}
 
-	public redraw(){
+	public draw(){
 		this.updateSquareSize();
 		this._renderer.clear();
 		this._squares.forEach((square) => {
@@ -62,7 +62,6 @@ export class Dancefloor {
 	}
 
 	public updateSquareSize() {
-		console.log(this._danceFloorConfig);
 		const rectWidth = this._renderer.height / this._danceFloorConfig.rows;
 		const rectHeight = this._renderer.width / this._danceFloorConfig.columns;
 		this.squareSize = Math.floor(Math.min(rectWidth, rectHeight));

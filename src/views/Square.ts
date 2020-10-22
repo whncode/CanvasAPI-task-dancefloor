@@ -9,8 +9,6 @@ export class Square {
 	public x : number;
 	public y : number;
 
-	private lastSize: number;
-
 	constructor(
 		private _renderer : Renderer,
 		private _danceFloor: Dancefloor,

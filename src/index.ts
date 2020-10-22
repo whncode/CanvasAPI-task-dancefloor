@@ -25,7 +25,7 @@ const initFn = () => {
 	// @TODO it's shitty solution, looks like in '99, react will be very helpful...
 	configForm.addEventListener("submit", (event) => {
 		const formData = new FormData(document.querySelector('form'));
-		dancefloor.update(formData.get("rows"), formData.get("columns"));
+		dancefloor.update(formData.get("rows"), );
 		event.preventDefault();
 		return false;
 	});
@@ -35,7 +35,7 @@ const initFn = () => {
 		renderer.width = targetForCanvas.clientWidth;
 		renderer.height = targetForCanvas.clientHeight;
 		renderer.resize();
-		dancefloor.redraw();
+		dancefloor.draw();
 	})
 };
 
